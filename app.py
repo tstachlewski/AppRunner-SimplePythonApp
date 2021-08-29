@@ -11,6 +11,21 @@ app = Flask(__name__)
 def hello():
     return "AWS Masters!"
 
+@app.route("/pi")
+def pi():
+
+    pi = 0
+    n = 4
+    d = 1
+
+    for i in range(1,10000):
+        a = 2 * (i % 2)
+        pi += a * n / d
+        d += 2
+
+
+    return "Pi: " + str(pi)
+
 
 @app.route("/add")
 def add():
