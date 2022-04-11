@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "AWS Masters!"
+    return "AWS Masters! Witamy!"
 
 @app.route("/pi")
 def pi():
